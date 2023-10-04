@@ -15,7 +15,7 @@ pipeline {
                 sh 'npm install' 
                 sh 'npm run build' 
                 sh 'docker build -t vite-img .' 
-                sh 'docker run -p 3000:3000  --name vite-app vite-img' 
+                sh 'docker run -p 3000:3000 vite-img' 
         }
     }
 }
