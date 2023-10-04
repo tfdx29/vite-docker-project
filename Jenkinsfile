@@ -1,13 +1,10 @@
 pipeline {
-    agent {
-        docker {
-            image 'node:16'
-        }
-    }
+    agent any
     stages {
         stage('Checkout') {
             steps {
                 checkout scm 
+                echo 'Checked out!'
             }
         }
         stage('Build and Dockerize') {
